@@ -1,0 +1,11 @@
+<div *ngIf="pokemonData">
+  <h2>{{ pokemonData.name }}</h2>
+  <h3>Habilidades:</h3>
+  <ul>
+    <li *ngFor="let ability of pokemonData.abilities">{{ ability.ability.name }}</li>
+  </ul>
+  <p>{{ pokemonData.species.name }} description (English): {{ pokemonData.species.flavor_text_entries[0].flavor_text }}</p>
+</div>
+
+
+

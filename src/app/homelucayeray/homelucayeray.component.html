@@ -1,0 +1,21 @@
+<div>
+  <h1>Pokémon</h1>
+  <form (ngSubmit)="searchPokemon()">
+    <label for="searchQuery">ID o Nombre del Pokémon:</label>
+    <input type="text" id="searchQuery" [(ngModel)]="searchQuery" name="searchQuery" required>
+    <button type="submit">Buscar</button>
+  </form>
+
+  <div *ngIf="message">
+    <p>{{ message }}</p>
+  </div>
+</div>
+
+<div *ngIf="pokemonData">
+  <img [src]="pokemonData.sprites.front_default" alt="Imagen del Pokémon">
+</div>
+
+<div>
+  <app-habilitatslucayeray [pokemonData]="pokemonData"></app-habilitatslucayeray>
+</div>
+
